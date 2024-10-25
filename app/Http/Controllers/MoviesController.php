@@ -46,8 +46,6 @@ class MoviesController extends Controller
         $findData = Movies::find($id);
 
         if (!$findData) {
-            // Handle the case where the blog post is not found
-            // For example, you can redirect back with an error message
             return redirect()->back()->with('error', 'Blog post not found');
         }
 

@@ -17,7 +17,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 
-Route::get('/dashboard', [DashboardController::class, 'chart'])->name('chart');
+Route::get('/', [DashboardController::class, 'chart'])->name('chart')->middleware('auth');
 
 
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies')->middleware('auth');
